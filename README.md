@@ -17,7 +17,7 @@ $ flutter pub get
 3) Import it 
 Now in Dart code, you can use:
 ```dart
-import 'package:auth_buttons/auth_buttons.dart';
+import 'package:auth_buttons/social_auth_buttons.dart';
 ```
 
 ## Recommendation
@@ -26,7 +26,7 @@ We recommend you to using `show` special when you want use some button.
 `show` help you importing part of library.
 
 ```dart
-import 'package:auth_buttons/auth_buttons.dart'
+import 'package:auth_buttons/social_auth_buttons.dart'
     show GoogleAuthButton, AuthButtonStyle;
 ```
 

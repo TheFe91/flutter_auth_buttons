@@ -14,17 +14,18 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  change_app_package_name: ^0.1.2
 
 flutter:
 
   assets:
-    - packages/auth_buttons/images/google_logo.png
-    - packages/auth_buttons/images/facebook_logo.png
-    - packages/auth_buttons/images/facebook_logo_white.png
-    - packages/auth_buttons/images/apple_logo_black.png
-    - packages/auth_buttons/images/apple_logo_white.png
-    - packages/auth_buttons/images/twitter_logo.png
-    - packages/auth_buttons/images/twitter_logo_white.png
-    - packages/auth_buttons/images/github_logo.png
-    - packages/auth_buttons/images/microsoft_logo.png
-    - packages/auth_buttons/images/email_password_logo.png
+    - packages/social_auth_buttons/images/google_logo.png
+    - packages/social_auth_buttons/images/facebook_logo.png
+    - packages/social_auth_buttons/images/facebook_logo_white.png
+    - packages/social_auth_buttons/images/apple_logo_black.png
+    - packages/social_auth_buttons/images/apple_logo_white.png
+    - packages/social_auth_buttons/images/twitter_logo.png
+    - packages/social_auth_buttons/images/twitter_logo_white.png
+    - packages/social_auth_buttons/images/github_logo.png
+    - packages/social_auth_buttons/images/microsoft_logo.png
+    - packages/social_auth_buttons/images/email_password_logo.png

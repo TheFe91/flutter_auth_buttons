@@ -1,4 +1,4 @@
-import 'package:auth_buttons/auth_buttons.dart';
+import 'package:social_auth_buttons/social_auth_buttons.dart';
 import 'package:flutter/material.dart';
 
 void main() {
