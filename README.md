@@ -1,24 +1,11 @@
 # social_auth_buttons
-[![Pub Version](https://img.shields.io/pub/v/auth_buttons?color=blue&logo=dart)](https://pub.dev/packages/auth_buttons)
+[![Pub Version](https://img.shields.io/pub/v/auth_buttons?color=blue&logo=dart)](https://pub.dev/packages/auth_buttons) (<b>auth_buttons</b>)
+[![Pub Version](https://img.shields.io/pub/v/social_auth_buttons?color=blue&logo=dart)](https://pub.dev/packages/social_auth_buttons) (<b>social_auth_buttons</b>)
+<br>
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![style: effective dart](https://img.shields.io/badge/style-effective_dart-40c4ff.svg)](https://pub.dev/packages/effective_dart)
 
 Social Auth Buttons is a fork of auth_buttons flutter widget library. It includes buttons for authenticating with the most popular social networks and with email/password.
-
-## Installation
-1) Add this to your packages pubspec.yaml file:
-```yaml
-dependencies:
-  auth_buttons: ^0.0.5
-```
-2) Install it 
-You can install it from the command line:
-```bash
-$ flutter pub get
-```
-3) Import it 
-Now in Dart code, you can use:
-```dart
-import 'package:auth_buttons/social_auth_buttons.dart';
-```
 
 ## Recommendation
 
