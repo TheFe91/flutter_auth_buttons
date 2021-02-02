@@ -1,8 +1,7 @@
-# auth_buttons
+# social_auth_buttons
 [![Pub Version](https://img.shields.io/pub/v/auth_buttons?color=blue&logo=dart)](https://pub.dev/packages/auth_buttons)
 
-Auth Buttons is a flutter widget library, include buttons for authenticating with the most popular 
-social networks like: Google, Facebook, Apple and too other.
+Social Auth Buttons is a fork of auth_buttons flutter widget library. It includes buttons for authenticating with the most popular social networks and with email/password.
 
 ## Installation
 1) Add this to your packages pubspec.yaml file:
