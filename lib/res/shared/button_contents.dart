@@ -24,25 +24,28 @@ class ButtonContents extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Image(
-          image: ExactAssetImage(
-            iconUrl,
+        Expanded(
+          flex: 2,
+          child: Image(
+            image: ExactAssetImage(
+              iconUrl,
+            ),
+            width: iconSize,
+            height: iconSize,
           ),
-          width: iconSize,
-          height: iconSize,
         ),
-        SizedBox(
-          width: separator,
-        ),
-        Text(
-          text,
-          style: textStyle ??
-              TextStyle(
-                color: (textColor) ?? (darkMode ? Colors.white : Colors.black),
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 0.50,
-              ),
+        Expanded(
+          flex: 8,
+          child: Text(
+            text,
+            style: textStyle ??
+                TextStyle(
+                  color: (textColor) ?? (darkMode ? Colors.white : Colors.black),
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 0.50,
+                ),
+          ),
         ),
       ],
     );
