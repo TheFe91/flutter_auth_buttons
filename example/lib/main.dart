@@ -44,6 +44,7 @@ class _MyAppState extends State<MyApp> {
                 onPressed: () {},
                 darkMode: darkMode,
                 style: authButtonStyle,
+                buttonColor: Colors.white,
               ),
               Divider(),
               GithubAuthButton(

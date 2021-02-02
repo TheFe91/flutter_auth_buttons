@@ -214,7 +214,7 @@ class FacebookAuthButton extends StatelessWidget {
           borderColor: borderColor,
           borderWidth: borderWidth ?? 2.0,
           child: ButtonContents(
-            iconUrl: facebookIcon,
+            iconUrl: darkMode ? facebookWhiteIcon : facebookIcon,
             iconSize: iconSize,
             separator: 0.0,
           ),
@@ -234,13 +234,13 @@ class FacebookAuthButton extends StatelessWidget {
           borderColor: borderColor,
           borderWidth: borderWidth,
           child: ButtonContents(
-            iconUrl: facebookIcon,
+            iconUrl: darkMode ? facebookWhiteIcon : facebookIcon,
             text: text,
             textStyle: textStyle,
             iconSize: iconSize,
             separator: separator,
             darkMode: darkMode,
-            textColor: Colors.white,
+            textColor: darkMode ? Colors.white : Colors.black,
           ),
         );
     }
