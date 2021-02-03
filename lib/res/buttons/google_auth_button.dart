@@ -1,3 +1,4 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:social_auth_buttons/social_auth_buttons.dart';
 import 'package:social_auth_buttons/res/shared/auth_button_style.dart';
 import 'package:social_auth_buttons/res/shared/button_contents.dart';
@@ -208,9 +209,10 @@ class GoogleAuthButton extends StatelessWidget {
           borderColor: borderColor ?? Colors.red,
           borderWidth: borderWidth ?? 2.0,
           child: ButtonContents(
-            iconUrl: googleIcon,
+            iconUrl: googleLogo,
             iconSize: iconSize,
             separator: 0.0,
+            isIcon: true,
           ),
         );
         break;
@@ -228,7 +230,7 @@ class GoogleAuthButton extends StatelessWidget {
           borderColor: borderColor,
           borderWidth: borderWidth,
           child: ButtonContents(
-            iconUrl: googleIcon,
+            iconUrl: googleLogo,
             text: text,
             textStyle: textStyle,
             iconSize: iconSize,

@@ -207,9 +207,10 @@ class MicrosoftAuthButton extends StatelessWidget {
           borderColor: borderColor ?? Colors.amber,
           borderWidth: borderWidth ?? 2.0,
           child: ButtonContents(
-            iconUrl: microsoftIcon,
+            iconUrl: microsoftLogo,
             iconSize: iconSize,
             separator: 0.0,
+            isIcon: true,
           ),
         );
         break;
@@ -227,7 +228,7 @@ class MicrosoftAuthButton extends StatelessWidget {
           borderColor: borderColor,
           borderWidth: borderWidth,
           child: ButtonContents(
-            iconUrl: microsoftIcon,
+            iconUrl: microsoftLogo,
             text: text,
             textStyle: textStyle,
             iconSize: iconSize,

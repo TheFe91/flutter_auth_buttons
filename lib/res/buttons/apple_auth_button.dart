@@ -1,3 +1,4 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:social_auth_buttons/res/shared/auth_button_style.dart';
 import 'package:social_auth_buttons/res/shared/button_contents.dart';
 import 'package:social_auth_buttons/res/shared/colors.dart';
@@ -210,9 +211,10 @@ class AppleAuthButton extends StatelessWidget {
           borderColor: borderColor,
           borderWidth: borderWidth ?? 2.0,
           child: ButtonContents(
-            iconUrl: darkMode ? appleWhiteIcon : appleBlackIcon,
+            iconUrl: darkMode ? appleLogoWhite : appleLogoBlack,
             iconSize: iconSize,
             separator: 0.0,
+            isIcon: true,
           ),
         );
         break;
@@ -230,7 +232,7 @@ class AppleAuthButton extends StatelessWidget {
           borderColor: borderColor,
           borderWidth: borderWidth,
           child: ButtonContents(
-            iconUrl: darkMode ? appleWhiteIcon : appleBlackIcon,
+            iconUrl: darkMode ? appleLogoWhite : appleLogoBlack,
             text: text,
             textStyle: textStyle,
             iconSize: iconSize,

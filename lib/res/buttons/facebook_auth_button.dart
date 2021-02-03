@@ -1,3 +1,4 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:social_auth_buttons/res/shared/auth_button_style.dart';
 import 'package:social_auth_buttons/res/shared/button_contents.dart';
 import 'package:social_auth_buttons/res/shared/colors.dart';
@@ -194,8 +195,11 @@ class FacebookAuthButton extends StatelessWidget {
     Color buttonColor = darkMode
         ? buttonDarkModeColor
         : this.buttonColor ?? buttonFacebookColor;
-    Color borderColor =
-        this.borderColor ?? darkMode ? buttonFacebookColor : Colors.transparent;
+    Color borderColor = this.borderColor ?? darkMode
+        ? buttonFacebookColor
+        : style == AuthButtonStyle.icon
+            ? buttonFacebookColor
+            : Colors.transparent;
     switch (style) {
       case AuthButtonStyle.icon:
         return SharedButton(
@@ -210,9 +214,12 @@ class FacebookAuthButton extends StatelessWidget {
           borderColor: borderColor,
           borderWidth: borderWidth ?? 2.0,
           child: ButtonContents(
-            iconUrl: darkMode ? facebookWhiteIcon : facebookIcon,
+            iconUrl: darkMode || buttonColor == buttonFacebookColor
+                ? facebookLogoWhite
+                : facebookLogoBlue,
             iconSize: iconSize,
             separator: 0.0,
+            isIcon: true,
           ),
         );
         break;
@@ -230,13 +237,17 @@ class FacebookAuthButton extends StatelessWidget {
           borderColor: borderColor,
           borderWidth: borderWidth,
           child: ButtonContents(
-            iconUrl: darkMode ? facebookWhiteIcon : facebookIcon,
+            iconUrl: darkMode || buttonColor == buttonFacebookColor
+                ? facebookLogoWhite
+                : facebookLogoBlue,
             text: text,
             textStyle: textStyle,
             iconSize: iconSize,
             separator: separator,
             darkMode: darkMode,
-            textColor: darkMode ? Colors.white : Colors.black,
+            textColor: darkMode || buttonColor == buttonFacebookColor
+                ? Colors.white
+                : Colors.black,
           ),
         );
     }

@@ -1,3 +1,4 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:social_auth_buttons/res/shared/auth_button_style.dart';
 import 'package:social_auth_buttons/res/shared/button_contents.dart';
 import 'package:social_auth_buttons/res/shared/colors.dart';
@@ -193,8 +194,13 @@ class GithubAuthButton extends StatelessWidget {
   Widget build(BuildContext context) {
     Color buttonColor =
         darkMode ? buttonDarkModeColor : this.buttonColor ?? buttonGithubColor;
-    Color borderColor =
-        this.borderColor ?? darkMode ? Colors.white : Colors.transparent;
+    Color borderColor = this.borderColor ?? darkMode
+        ? style == AuthButtonStyle.icon
+            ? Colors.white
+            : buttonGithubColor
+        : style == AuthButtonStyle.icon
+            ? buttonGithubColor
+            : Colors.transparent;
     switch (style) {
       case AuthButtonStyle.icon:
         return SharedButton(
@@ -209,9 +215,12 @@ class GithubAuthButton extends StatelessWidget {
           borderColor: borderColor,
           borderWidth: borderWidth ?? 2.0,
           child: ButtonContents(
-            iconUrl: githubIcon,
+            iconUrl: darkMode || buttonColor == buttonGithubColor
+                ? githubLogoWhite
+                : githubLogoBlack,
             iconSize: iconSize,
             separator: 0.0,
+            isIcon: true,
           ),
         );
         break;
@@ -229,13 +238,17 @@ class GithubAuthButton extends StatelessWidget {
           borderColor: borderColor,
           borderWidth: borderWidth,
           child: ButtonContents(
-            iconUrl: githubIcon,
+            iconUrl: darkMode || buttonColor == buttonGithubColor
+                ? githubLogoWhite
+                : githubLogoBlack,
             text: text,
             textStyle: textStyle,
             iconSize: iconSize,
             separator: separator,
             darkMode: darkMode,
-            textColor: Colors.white,
+            textColor: darkMode || buttonColor == buttonGithubColor
+                ? Colors.white
+                : Colors.black,
           ),
         );
     }

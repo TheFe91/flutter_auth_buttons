@@ -1,3 +1,4 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:social_auth_buttons/res/shared/auth_button_style.dart';
 import 'package:social_auth_buttons/res/shared/button_contents.dart';
 import 'package:social_auth_buttons/res/shared/colors.dart';
@@ -177,7 +178,7 @@ class EmailPasswordAuthButton extends StatelessWidget {
     this.elevation,
     this.borderRadius = 8.0,
     this.padding,
-    this.text = 'Sign in with Email and Password',
+    this.text = 'Sign in with Email',
     this.textStyle,
     this.darkMode = false,
     this.borderColor,
@@ -210,9 +211,10 @@ class EmailPasswordAuthButton extends StatelessWidget {
           borderColor: borderColor,
           borderWidth: borderWidth ?? 2.0,
           child: ButtonContents(
-            iconUrl: emailPasswordIcon,
+            iconUrl: darkMode ? envelopeLogoBlack : envelopeLogoWhite,
             iconSize: iconSize,
             separator: 0.0,
+            isIcon: true,
           ),
         );
         break;
@@ -230,7 +232,7 @@ class EmailPasswordAuthButton extends StatelessWidget {
           borderColor: borderColor,
           borderWidth: borderWidth,
           child: ButtonContents(
-            iconUrl: emailPasswordIcon,
+            iconUrl: darkMode ? envelopeLogoBlack : envelopeLogoWhite,
             text: text,
             textStyle: textStyle,
             iconSize: iconSize,

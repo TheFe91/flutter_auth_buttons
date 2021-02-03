@@ -1,6 +1,6 @@
 name: social_auth_buttons
 description: Social Auth Buttons is a fork of auth_buttons flutter widget library. It includes buttons for authenticating with the most popular social networks and with email/password.
-version: 1.0.1
+version: 1.1.0
 homepage: https://github.com/TheFe91/flutter_auth_buttons
 
 environment:
@@ -10,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_svg:
 
 dev_dependencies:
   flutter_test:
@@ -19,13 +20,15 @@ dev_dependencies:
 flutter:
 
   assets:
-    - packages/social_auth_buttons/images/google_logo.png
-    - packages/social_auth_buttons/images/facebook_logo.png
-    - packages/social_auth_buttons/images/facebook_logo_white.png
-    - packages/social_auth_buttons/images/apple_logo_black.png
-    - packages/social_auth_buttons/images/apple_logo_white.png
-    - packages/social_auth_buttons/images/twitter_logo.png
-    - packages/social_auth_buttons/images/twitter_logo_white.png
-    - packages/social_auth_buttons/images/github_logo.png
-    - packages/social_auth_buttons/images/microsoft_logo.png
-    - packages/social_auth_buttons/images/email_password_logo.png
+    - packages/social_auth_buttons/images/google_logo.svg
+    - packages/social_auth_buttons/images/facebook_logo_blue.svg
+    - packages/social_auth_buttons/images/facebook_logo_white.svg
+    - packages/social_auth_buttons/images/apple_logo_black.svg
+    - packages/social_auth_buttons/images/apple_logo_white.svg
+    - packages/social_auth_buttons/images/twitter_logo_black.svg
+    - packages/social_auth_buttons/images/twitter_logo_white.svg
+    - packages/social_auth_buttons/images/github_logo_black.svg
+    - packages/social_auth_buttons/images/github_logo_white.svg
+    - packages/social_auth_buttons/images/microsoft_logo.svg
+    - packages/social_auth_buttons/images/envelope_logo_white.svg
+    - packages/social_auth_buttons/images/envelope_logo_black.svg

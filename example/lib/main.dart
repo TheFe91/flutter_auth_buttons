@@ -1,3 +1,4 @@
+import 'package:social_auth_buttons/res/shared/colors.dart';
 import 'package:social_auth_buttons/social_auth_buttons.dart';
 import 'package:flutter/material.dart';
 
@@ -11,11 +12,14 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  String appName = 'Auth Buttons Example';
+  bool darkMode = false;
+  AuthButtonStyle authButtonStyle;
+  Color githubBtnColor = Colors.white;
+  Color facebookBtnColor = Colors.white;
+
   @override
   Widget build(BuildContext context) {
-    String appName = 'Auth Buttons Example';
-    bool darkMode = false;
-    AuthButtonStyle authButtonStyle;
     return MaterialApp(
       title: appName,
       home: Scaffold(
@@ -28,74 +32,75 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              RaisedButton(
+                onPressed: () => setState(() => darkMode = !darkMode),
+                child: Text('Dark / Light mode'),
+              ),
+              RaisedButton(
+                onPressed: () => setState(() {
+                  authButtonStyle =
+                      authButtonStyle == null ? AuthButtonStyle.icon : null;
+                }),
+                child: Text('Icon / Extended mode'),
+              ),
+              RaisedButton(
+                onPressed: () => setState(() {
+                 facebookBtnColor = facebookBtnColor == Colors.white ? buttonFacebookColor : Colors.white;
+                 githubBtnColor = githubBtnColor == Colors.white ? buttonGithubColor : Colors.white;
+                }),
+                child: Text('GitHub and Facebook Button Color'),
+              ),
+              SizedBox(height: 50),
               GoogleAuthButton(
                 onPressed: () {},
                 darkMode: darkMode,
                 style: authButtonStyle,
+                width: authButtonStyle == null ? 300 : null,
               ),
-              Divider(),
+              SizedBox(height: 10),
               AppleAuthButton(
                 onPressed: () {},
                 darkMode: darkMode,
                 style: authButtonStyle,
+                width: authButtonStyle == null ? 300 : null,
               ),
-              Divider(),
+              SizedBox(height: 10),
               FacebookAuthButton(
                 onPressed: () {},
                 darkMode: darkMode,
                 style: authButtonStyle,
-                buttonColor: Colors.white,
+                buttonColor: facebookBtnColor,
+                width: authButtonStyle == null ? 300 : null,
               ),
-              Divider(),
+              SizedBox(height: 10),
               GithubAuthButton(
                 onPressed: () {},
                 darkMode: darkMode,
                 style: authButtonStyle,
+                buttonColor: githubBtnColor,
+                width: authButtonStyle == null ? 300 : null,
               ),
-              Divider(),
+              SizedBox(height: 10),
               MicrosoftAuthButton(
                 onPressed: () {},
                 darkMode: darkMode,
                 style: authButtonStyle,
+                width: authButtonStyle == null ? 300 : null,
               ),
-              Divider(),
+              SizedBox(height: 10),
               TwitterAuthButton(
                 onPressed: () {},
                 darkMode: darkMode,
                 style: authButtonStyle,
+                width: authButtonStyle == null ? 300 : null,
               ),
-              Divider(),
+              SizedBox(height: 10),
               EmailPasswordAuthButton(
                 onPressed: () {},
                 darkMode: darkMode,
                 style: authButtonStyle,
+                width: authButtonStyle == null ? 300 : null,
               ),
-              Divider(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  GoogleAuthButton(
-                    onPressed: () {},
-                    darkMode: darkMode,
-                    style: authButtonStyle,
-                    textStyle: TextStyle(
-                      fontSize: 15,
-                      color: darkMode ? Colors.white : Colors.black,
-                    ),
-                    iconSize: 25.0,
-                  ),
-                  MicrosoftAuthButton(
-                    onPressed: () {},
-                    darkMode: darkMode,
-                    style: authButtonStyle,
-                    iconSize: 25.0,
-                    textStyle: TextStyle(
-                      fontSize: 15,
-                      color: darkMode ? Colors.white : Colors.black,
-                    ),
-                  ),
-                ],
-              )
             ],
           ),
         ),
