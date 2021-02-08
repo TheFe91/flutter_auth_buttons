@@ -50,7 +50,7 @@ class ButtonContents extends StatelessWidget {
                       TextStyle(
                         color: (textColor) ??
                             (darkMode ? Colors.white : Colors.black),
-                        fontSize: MediaQuery.of(context).size.width / 16.6,
+                        fontSize: MediaQuery.of(context).size.width / 23,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 0.50,
                       ),

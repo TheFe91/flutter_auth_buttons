@@ -1,3 +1,4 @@
+## [1.1.2] - Fixed text size
 ## [1.1.1+2] - Passed all static analysis tests
 ## [1.1.1+1] - Updated dependencies
 ## [1.1.1] - Text size is now dynamic, based on device display size and density

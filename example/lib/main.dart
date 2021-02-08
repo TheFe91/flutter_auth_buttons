@@ -45,8 +45,12 @@ class _MyAppState extends State<MyApp> {
               ),
               RaisedButton(
                 onPressed: () => setState(() {
-                 facebookBtnColor = facebookBtnColor == Colors.white ? buttonFacebookColor : Colors.white;
-                 githubBtnColor = githubBtnColor == Colors.white ? buttonGithubColor : Colors.white;
+                  facebookBtnColor = facebookBtnColor == Colors.white
+                      ? buttonFacebookColor
+                      : Colors.white;
+                  githubBtnColor = githubBtnColor == Colors.white
+                      ? buttonGithubColor
+                      : Colors.white;
                 }),
                 child: Text('GitHub and Facebook Button Color'),
               ),
