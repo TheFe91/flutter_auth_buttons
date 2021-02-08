@@ -1,6 +1,6 @@
 name: social_auth_buttons
 description: Social Auth Buttons is a fork of auth_buttons flutter widget library. It includes buttons for authenticating with the most popular social networks and with email/password.
-version: 1.1.1+2
+version: 1.1.2
 homepage: https://github.com/TheFe91/flutter_auth_buttons
 
 environment:
