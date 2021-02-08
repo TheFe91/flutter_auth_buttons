@@ -1,11 +1,10 @@
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:social_auth_buttons/res/shared/auth_button_style.dart';
 import 'package:social_auth_buttons/res/shared/button_contents.dart';
 import 'package:social_auth_buttons/res/shared/colors.dart';
 import 'package:social_auth_buttons/res/shared/images_url.dart';
 import 'package:social_auth_buttons/res/shared/shared_button.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 
 class TwitterAuthButton extends StatelessWidget {
   ///**[onPressed]** is a void function well be called when the button pressed.
