@@ -1,7 +1,5 @@
 # social_auth_buttons
-[![Pub Version](https://img.shields.io/pub/v/auth_buttons?color=blue&logo=dart)](https://pub.dev/packages/auth_buttons) (<b>auth_buttons</b>)
-[![Pub Version](https://img.shields.io/pub/v/social_auth_buttons?color=blue&logo=dart)](https://pub.dev/packages/social_auth_buttons) (<b>social_auth_buttons</b>)
-<br>
+[![Pub Version](https://img.shields.io/pub/v/social_auth_buttons?color=blue&logo=dart)](https://pub.dev/packages/social_auth_buttons)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![style: effective dart](https://img.shields.io/badge/style-effective_dart-40c4ff.svg)](https://pub.dev/packages/effective_dart)
 
