@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class ButtonContents extends StatelessWidget {
-  final double iconSize;
+  final double? iconSize;
   final String text;
-  final String iconUrl;
-  final TextStyle textStyle;
+  final String? iconUrl;
+  final TextStyle? textStyle;
   final bool darkMode;
-  final double separator;
-  final Color textColor;
+  final double? separator;
+  final Color? textColor;
   final bool isIcon;
 
   ButtonContents({
@@ -26,7 +26,7 @@ class ButtonContents extends StatelessWidget {
   Widget build(BuildContext context) {
     return isIcon
         ? SvgPicture.asset(
-            iconUrl,
+            iconUrl!,
             width: iconSize,
             height: iconSize,
           )
@@ -37,7 +37,7 @@ class ButtonContents extends StatelessWidget {
               Expanded(
                 flex: 2,
                 child: SvgPicture.asset(
-                  iconUrl,
+                  iconUrl!,
                   width: iconSize,
                   height: iconSize,
                 ),

@@ -14,7 +14,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   String appName = 'Auth Buttons Example';
   bool darkMode = false;
-  AuthButtonStyle authButtonStyle;
+  AuthButtonStyle? authButtonStyle;
   Color githubBtnColor = Colors.white;
   Color facebookBtnColor = Colors.white;
 
@@ -32,18 +32,18 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () => setState(() => darkMode = !darkMode),
                 child: Text('Dark / Light mode'),
               ),
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () => setState(() {
                   authButtonStyle =
                       authButtonStyle == null ? AuthButtonStyle.icon : null;
                 }),
                 child: Text('Icon / Extended mode'),
               ),
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () => setState(() {
                   facebookBtnColor = facebookBtnColor == Colors.white
                       ? buttonFacebookColor

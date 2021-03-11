@@ -1,3 +1,4 @@
+## [2.0.0] - BREAKING - Migrated to NullSafety
 ## [1.1.2] - Fixed text size
 ## [1.1.1+2] - Passed all static analysis tests
 ## [1.1.1+1] - Updated dependencies

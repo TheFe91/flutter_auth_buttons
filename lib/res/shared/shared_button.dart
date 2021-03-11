@@ -5,40 +5,40 @@ class SharedButton extends StatelessWidget {
   final VoidCallback onPressed;
 
   ///[buttonColor] Define the button color, default value [Colors.white].
-  final Color buttonColor;
+  final Color? buttonColor;
 
   ///[splashColor] Define the color when the button onPressed,
   ///the default value is [Colors.grey].
-  final Color splashColor;
+  final Color? splashColor;
 
   ///[borderColor] Define the color border around the button,
   ///the default value is [null].
-  final Color borderColor;
+  final Color? borderColor;
 
   ///[borderWidth] Define the border width around the button,
   ///the default value is [null].
-  final double borderWidth;
+  final double? borderWidth;
 
   ///[elevation] Define the elevation button, the default value is [2.0].
-  final double elevation;
+  final double? elevation;
 
   ///[borderRadius] Define the border radius, the default value is [0.0].
-  final double borderRadius;
+  final double? borderRadius;
 
   ///[padding] Define the button padding, the default value is [null].
-  final EdgeInsets padding;
+  final EdgeInsets? padding;
 
   ///[child] .
   final Widget child;
 
   ///[width] Define the button width.
-  final double width;
+  final double? width;
 
   ///[height] Define the button height.
-  final double height;
+  final double? height;
 
   SharedButton({
-    @required this.onPressed,
+    required this.onPressed,
     this.buttonColor,
     this.splashColor,
     this.borderColor,
@@ -46,7 +46,7 @@ class SharedButton extends StatelessWidget {
     this.elevation,
     this.borderRadius,
     this.padding,
-    @required this.child,
+    required this.child,
     this.width,
     this.height,
   });
@@ -56,8 +56,8 @@ class SharedButton extends StatelessWidget {
     BorderSide borderSide;
     if (borderColor != null && borderWidth != null) {
       borderSide = BorderSide(
-        width: borderWidth,
-        color: borderColor,
+        width: borderWidth!,
+        color: borderColor!,
       );
     } else
       borderSide = BorderSide.none;
